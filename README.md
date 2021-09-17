@@ -1,2 +1,3 @@
-# Make_public_Fetch_Rewards
-Points API
+# Fetch Points Backend
+
+This
