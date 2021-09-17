@@ -1,6 +1,6 @@
 const express = require("express");
-const allTransactions = require("../User_Data/All_Transactions");
-const spendableTransactions = require("../User_Data/Spendable_Transactions");
+let allTransactions = require("../User_Data/All_Transactions");
+let spendableTransactions = require("../User_Data/Spendable_Transactions");
 const router = express.Router();
 
 let totalPoints = 11300;
@@ -19,6 +19,15 @@ router.get("/", (req, res) => res.json(allTransactions));
 
 // Route to get points balance
 router.get("/balance", (req, res) => res.json(payerBalance));
+
+// Route to clear all transaction data
+router.delete("/clear", (req, res) => {
+  allTransactions = [];
+  spendableTransactions = [];
+  payerBalance = {};
+  totalPoints = 0;
+  res.send("All transaction data has been removed");
+});
 
 // Add a new transaction
 router.post("/add-transaction", (req, res) => {
