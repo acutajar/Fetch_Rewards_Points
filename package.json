@@ -1,5 +1,5 @@
 {
-  "name": "Make_public_Fetch_Rewards",
+  "name": "Fetch_Rewards_Points",
   "version": "1.0.0",
   "description": "Points API",
   "main": "index.js",
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/acutajar/Make_public_Fetch_Rewards.git"
+    "url": "git+https://github.com/acutajar/Fetch_Rewards_Points.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/acutajar/Make_public_Fetch_Rewards/issues"
+    "url": "https://github.com/acutajar/Fetch_Rewards_Points/issues"
   },
-  "homepage": "https://github.com/acutajar/Make_public_Fetch_Rewards#readme",
+  "homepage": "https://github.com/acutajar/Fetch_Rewards_Points#readme",
   "dependencies": {
     "express": "^4.17.1"
   },
