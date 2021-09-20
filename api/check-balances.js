@@ -8,7 +8,7 @@ const router = express.Router();
 router.get("/spendable", (req, res) => res.json(spendableTransactions));
 
 // Route to get full transaction history
-router.get("/", (req, res) => res.json(allTransactions));
+router.get("/transaction-log", (req, res) => res.json(allTransactions));
 
 // Route to get points balance
 router.get("/balance", (req, res) => res.json(payerBalance));
