@@ -16,7 +16,7 @@ test("add-transaction 1", (done) => {
     .send({ payer: "DANNON", points: 1000, timestamp: "2020-11-02T14:00:00Z" })
     .then(() => {
       request(app)
-        .get("/api")
+        .get("/api/transaction-log")
         .expect(
           [
             {
@@ -36,7 +36,7 @@ test("add-transaction 2", (done) => {
     .send({ payer: "UNILEVER", points: 200, timestamp: "2020-10-31T11:00:00Z" })
     .then(() => {
       request(app)
-        .get("/api")
+        .get("/api/transaction-log")
         .expect(
           [
             {
@@ -61,7 +61,7 @@ test("add-transaction 3", (done) => {
     .send({ payer: "DANNON", points: -200, timestamp: "2020-10-31T15:00:00Z" })
     .then(() => {
       request(app)
-        .get("/api")
+        .get("/api/transaction-log")
         .expect(
           [
             {
@@ -95,7 +95,7 @@ test("add-transaction 4", (done) => {
     })
     .then(() => {
       request(app)
-        .get("/api")
+        .get("/api/transaction-log")
         .expect(
           [
             {
@@ -130,7 +130,7 @@ test("add-transaction 5", (done) => {
     .send({ payer: "DANNON", points: 300, timestamp: "2020-10-31T10:00:00Z" })
     .then(() => {
       request(app)
-        .get("/api/spendable")
+        .get("/api/transaction-log")
         .expect(
           [
             {
@@ -165,7 +165,6 @@ test("spend 5000 points", (done) => {
   request(app)
     .post("/api/spend-points")
     .send({ points: 5000 })
-    // .expect("Content-Type", /json/)
     .expect(
       [
         { payer: "DANNON", points: -100 },
