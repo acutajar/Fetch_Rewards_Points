@@ -5,8 +5,10 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-// points api routes
-app.use("/api", require("./api/points"));
+// api routes
+app.use("/api", require("./api/check-balances"));
+app.use("/api/add-transaction", require("./api/add-transaction"));
+app.use("/api/spend-points", require("./api/spend-points"));
 
 const PORT = process.env.PORT || 5000;
 
