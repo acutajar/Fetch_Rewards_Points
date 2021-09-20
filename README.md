@@ -28,4 +28,4 @@ https://nodejs.org/en/
 
 ## Unit Tests
 
-Additionally, I have set up unit tests for the example listed in the instructions document. To run the tests, follow steps 1 and 2 above, then run `npm run test`.
+I have set up unit tests for the example listed in the instructions document. To run the tests, follow steps 1 and 2 above, then run `npm run test`.
